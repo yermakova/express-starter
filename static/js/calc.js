@@ -168,6 +168,7 @@ $('#mod').click(function() {
   });
 
   $('#dance').click(function() {
+    console.log("hi mom");
     $('#calc_container').addClass('dance');
     setTimeout(function () {
       $('#calc_container').removeClass('dance');
