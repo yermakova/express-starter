@@ -26,4 +26,7 @@ $('.clickable').click(function() {
 });
 
 // Problem 5 (Imgrr) -------------------------------------------------
-// WRITE CODE HERE
+
+$('#change2_img').click(function() {
+		$('#main2_img').attr('src', '/static/img/' + $('#new2_img_file').val() + '.jpg');
+});
