@@ -27,6 +27,13 @@ $('.clickable').click(function() {
 
 // Problem 5 (Imgrr) -------------------------------------------------
 
-$('#change2_img').click(function() {
-		$('#main2_img').attr('src', '/static/img/' + $('#new2_img_file').val() + '.jpg');
+
+
+
+jQuery(function(){
+     $("change2_img").hover(
+          function(){this.src = this.src.replace("new2_img_file","main2_img");},
+          
+     });
 });
+
