@@ -27,7 +27,7 @@ $('.clickable').click(function() {
 
 // Problem 5 (Imgrr) -------------------------------------------------
 
-$('.clickable2').click(function() {
 
-   $('#main2_img').attr('src', '/static/img/' + $('#new2_img_file').val() + '.jpg');
+$('.clickable2').click(function() {
+  $('#main2_img').attr('src', $(this).attr('src'));
 });

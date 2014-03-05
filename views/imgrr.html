@@ -51,31 +51,36 @@
 
     <hr>
 
-    <div class="problem">
-      <h2 class="problem_title">Imgrr</h2>
+    <div class="problem2">
+      <h2 class="problem_title2">Imgrr</h2>
       <p>In the space below, make a large main image and three smaller
       thumbnails below it. Then make it so that when you click a thumbnail it
       shows up as the large image. Use the previous parts to guide you!</p>
   
 
 
-
-
-
- <div class="problem">
-      <h2 class="problem_title">Pictures from Vietnam</h2>
+ 
+    <h2 class="problem_title">Pictures from Vietnam</h2>
       <img id="main2_img" src="/static/img/IMG_1348.JPG" height="700px">
-    </div>
-
- <div class="problem">
-      <h2 class="problem_title">See more pictures!</h2>
+  
+    <h2 class="problem_title">See more pictures!</h2>
       <img class="clickable2" src="/static/img/IMG_1348.JPG" width="100px" height="100px">
       <img class="clickable2" src="/static/img/IMG_1377.JPG" width="100px" height="100px">
       <img class="clickable2" src="/static/img/IMG_1398.JPG" width="100px" height="100px">
-    </div>  
+    
+<script>
+  $(document).ready(function(){
+      $("img"). click(function(e) {
+        var newclass = $(this).attr("id");
+        var oldclass = $('#main2_img').attr('class');
+        $('#main2_img').fadeOut(function() {
+          $('#main2_img').removeClass(oldclass).addClass(newclass).fadeIn('slow');
+        })
+      })
 
+        });
+  </script>
 
- 
 
 
 
