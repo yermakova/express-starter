@@ -100,9 +100,9 @@ for (var i = 0; i <= 500; i=i+5) {
 
 
 $('#p12').click(function() {
-for (var radius = 0; radius <= 20; radius=radius+1) {
+for (var radius = 1; radius <= 60; radius=radius+3) {
 	  context.beginPath();
-      context.arc(250, 250, radius, 2 * Math.PI/12, Math.PI/15);
+      context.arc(250, 250, radius, 4*Math.PI, 2*Math.PI);
       context.stroke();
   }
 });
@@ -121,4 +121,11 @@ $('#p13').click(function() {
 });
   //
 
+
+  //
+
+  //
+
 });
+
+//
