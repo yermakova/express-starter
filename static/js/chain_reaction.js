@@ -19,8 +19,8 @@ balls.push(b2);
 
 for (var i = 0; i <= numBalls; i++) {
   var b3 = {x:190*Math.random(), 
-            y:200*Math.random(), 
-            radius:95*Math.random(), 
+            y:900*Math.random(), 
+            radius:80*Math.random(), 
             color:'PaleTurquoise', 
             vy:7*Math.random(), 
             vx:-10*Math.random()};
@@ -42,7 +42,7 @@ for (var i = 0; i <= numBalls; i++) {
 for (var i = 0; i <= numBalls; i++) {
   var b3 = {x:700*Math.random(), 
             y:1000*Math.random(), 
-            radius:40*Math.random(), 
+            radius:30*Math.random(), 
             color:'blue', 
             vy:4*Math.random(), 
             vx:-10*Math.random()};
@@ -53,7 +53,7 @@ for (var i = 0; i <= numBalls; i++) {
 for (var i = 0; i <= numBalls; i++) {
   var b3 = {x:700*Math.random(), 
             y:900*Math.random(), 
-            radius:5*Math.random(), 
+            radius:20*Math.random(), 
             color:'DeepSkyBlue ', 
             vy:7*Math.random(), 
             vx:-10*Math.random()};
@@ -75,7 +75,7 @@ for (var i = 0; i <= numBalls; i++) {
 for (var i = 0; i <= numBalls; i++) {
   var b3 = {x:500*Math.random(), 
             y:900*Math.random(), 
-            radius:15*Math.random(), 
+            radius:25*Math.random(), 
             color:'LightSkyBlue', 
             vy:7*Math.random(), 
             vx:-10*Math.random()};
