@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 var reactions = [];
 
-var numBalls = 300;
+var numBalls = 10;
 
 var balls = [];
  
@@ -73,7 +73,7 @@ for (var i = 0; i <= numBalls; i++) {
   balls.push(b3);
 
 };
-*/
+
 
 for (var i = 0; i <= numBalls; i++) {
   var b3 = {x:500*Math.random(), 
@@ -85,6 +85,7 @@ for (var i = 0; i <= numBalls; i++) {
   balls.push(b3);
 
 };
+*/
 
 
  
@@ -104,10 +105,27 @@ for (var i = 0; i <= numBalls; i++) {
   // Run an interation of the game
   var updateGame = function() {
   
+  for (var i = 0; i < reactions.length; i++) { 
+    if (reactions[i].radius<30)
+      reactions[i].radius++;
+  }
+
   context.clearRect(0,0,1000,1000);
   for (var i = 0; i < balls.length; i++) {
-
+       var collided = false;
+        for (var j = 0; j < reactions.length; j++) {
+        /*  if (collided = true) {
+  
+      } */
+                console.log(balls[i], reactions[j]);
+                var xdiff = Math.abs(balls[i].x - reactions[j].x);
+                var ydiff = Math.abs(balls[i].y - reactions[j].y);
+                var dist = Math.sqrt(xdiff * xdiff + ydiff * ydiff);
+                if (dist<=(balls[i].radius + reactions[j].radius) {
+                 alert('BOOM'); 
+               }
     
+
     if (balls[i].x < 5|| balls[i].x > 760) balls[i].vx = -balls[i].vx;
     if (balls[i].y < 5 || balls[i].y > 760) balls[i].vy = -balls[i].vy;
     balls[i].x+=balls[i].vx;
@@ -115,13 +133,15 @@ for (var i = 0; i <= numBalls; i++) {
 
     drawball(balls[i].x,balls[i].y, balls[i].radius, balls[i].color); 
     
-  }
+  
+
+
 
    for (var i = 0; i < reactions.length; i++) {
 
     drawball(reactions[i].x,reactions[i].y, reactions[i].radius, reactions[i].color); 
-    
-  }
+    }
+  
     requestAnimationFrame(updateGame);
 };
 
@@ -130,18 +150,22 @@ for (var i = 0; i <= numBalls; i++) {
     // Find the mouse x and y relative to the top-left corner of the canvas
     var x = e.pageX - $(this).offset().left;
     var y = e.pageY - $(this).offset().top;
-    for (var i = 0; i <= 0; i++) {
-    var rxnclick = 
-            {x:x, 
-            y:y,
-            radius:30, 
-            color:'green', 
-          }
-        
+    for (var i = 0; i <= reactions.length; i++) { 
+
+            var rxnclick = 
+                {x:x, 
+                y:y,
+                radius:1, 
+                color:'lightgreen', 
+              }
+  
+        }
+
+       
   reactions.push(rxnclick);
 
-};
-  });
+
+ });
 
   updateGame();
 });
