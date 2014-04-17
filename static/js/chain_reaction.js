@@ -202,7 +202,7 @@ if ((reacting === true) && (reactions.length === 0)) {
     gameState = 'playing';
   }
 
-  if ((reacting === false) && (gameState === 'playing')) {
+  else if ((reacting === false) && (gameState === 'playing')) {
     reacting = true;
     var x = e.pageX - $(this).offset().left;
     var y = e.pageY - $(this).offset().top;
