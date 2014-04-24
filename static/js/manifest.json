@@ -1,0 +1,13 @@
+{
+	"manifest_version": 2;
+	"name": "I/O Codelab",
+	"version": '1',
+	"permissions": [],
+	"app": {
+	"background": {
+	"scripts": [background.js"]
+	
+	}
+	},
+	"minimum_chrome_version":"28"
+}
