@@ -17,47 +17,47 @@ var levels = [
               {
                 num:1,
                 minReactions:1,
-                numBalls:10,
+                numBalls:6,
               }, 
               {
                 num:2,
-                minReactions:5,
+                minReactions:6,
                 numBalls:10,
               }, 
               {
                 num:3,
-                minReactions:10,
+                minReactions:20,
                 numBalls:25,
               },
               {
                 num:4,
-                minReactions:15,
+                minReactions:25,
                 numBalls:30,
               },
               {
                 num:5,
-                minReactions:23,
-                numBalls:37,
+                minReactions:27,
+                numBalls:34,
               },
               {
                 num:6,
-                minReactions:33,
-                numBalls:45,
+                minReactions:27,
+                numBalls:30,
               },
               {
                 num:7,
-                minReactions:45,
-                numBalls:60,
+                minReactions:30,
+                numBalls:32,
               },
               {
                 num:8,
-                minReactions:52,
-                numBalls:60,
+                minReactions:40,
+                numBalls:41,
               },
               {
                 num:9,
-                minReactions:69,
-                numBalls:74,
+                minReactions:50,
+                numBalls:50,
               }];
 
 
@@ -159,7 +159,7 @@ for (var i = 0; i <= numBalls; i++) {
     if (gameState == 'menu') {
       context.fillStyle = "Pink";
       context.font = "40px Arial";
-      context.fillText(menuText, 50, 50);
+      context.fillText(menuText, 200, 300);
     } else if (gameState === 'playing') {
 
                     context.fillStyle = "light blue";
@@ -233,7 +233,8 @@ for (var i = 0; i <= numBalls; i++) {
       console.log(levels[curLevel].minReactions);
       if (numReacted >= levels[curLevel].minReactions) {
         curLevel++;
-        menuText = "Congrats! You're a winner and get to move on to the next level";
+        numReacted = 0;
+        menuText = "Congrats! Click to move on.";
           if (curLevel === levels.length) {
             curLevel = 0;
             menuText = "You won the whole game, congrats!";
