@@ -68,12 +68,14 @@ app.get('/facts', function(req, res) {
 });
 
 app.get('/submit_fact', function(req, res) {
-  res.render('facts.html', { 
-  randomfactlist: factsarr
-  });
   var queryfact = req.query['fact'];
   factsarr.push(queryfact);
+  res.render('facts.html', { 
+    randomfactlist: factsarr
+  });
+  
   res.redirect('/facts');
+
 });
 
 ///////////////////////////////////////////////////////////////////////////////
