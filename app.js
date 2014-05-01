@@ -61,13 +61,20 @@ app.get('/random_fact', function(req, res) {
  randomfact: rando });
 });
 
-app.get('/facts', function(req, res) {
-  
+app.get('/facts', function(req, res) { 
   res.render('facts.html', { 
  randomfactlist: factsarr 
   });
 });
 
+app.get('/submit_fact', function(req, res) {
+  res.render('facts.html', { 
+  randomfactlist: factsarr
+  });
+  var queryfact = req.query['fact'];
+  factsarr.push(queryfact);
+  res.redirect('/facts');
+});
 
 ///////////////////////////////////////////////////////////////////////////////
 // RUN CONFIGURATION                                                         //
