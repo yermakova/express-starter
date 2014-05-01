@@ -13,6 +13,7 @@ app.use('/static', express.static(__dirname + '/static'));
 //use ejs for html templates
 app.engine('html', ejs.renderFile);
 
+var factsarr = ['Beets make your poop purple', 'EGCG is in green tea and it stops cancer cell growth'];
 
 ///////////////////////////////////////////////////////////////////////////////
 // APP ROUTES                                                                //
@@ -55,9 +56,10 @@ app.get('/chain-reaction', function(req, res) {
 });
 
 
-app.get('/fact', function(req, res) {
+app.get('/random_fact', function(req, res) {
+  var rando = factsarr[Math.floor(Math.random()*factsarr.length)];
   res.render('fact.html', {
- your_name: "Awesome Person"
+ randomfact: rando
  });
 
 });
