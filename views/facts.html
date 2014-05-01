@@ -1,7 +1,33 @@
 <html>
+    <head>
+    <title>Here's my list of random facts</title>
+  </head>
+
   <body>
-    <!-- insert your templating code here
-        hint: check out http://embeddedjs.com/ to see examples of templates
-        using for loops -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+   
+      <h1>List of Awesome Facts</h1>
+      
+        <ul>
+				<% for(var i=0; i<randomfactlist.length; i++) {%>
+				   <li><%= randomfactlist[i] %></li>
+				<% } %>
+				</ul> 
+
+      <br>
+      <br>
+      <br>
+ 
+      <br>
+      <br>
+      <br>
+      
+    </center>
   </body>
+
 </html>
+

@@ -55,14 +55,20 @@ app.get('/chain-reaction', function(req, res) {
   res.render('chain_reaction.html', { });
 });
 
-
 app.get('/random_fact', function(req, res) {
   var rando = factsarr[Math.floor(Math.random()*factsarr.length)];
   res.render('fact.html', {
- randomfact: rando
- });
-
+ randomfact: rando });
 });
+
+app.get('/facts', function(req, res) {
+  
+  res.render('facts.html', { 
+ randomfactlist: factsarr 
+  });
+});
+
+
 ///////////////////////////////////////////////////////////////////////////////
 // RUN CONFIGURATION                                                         //
 ///////////////////////////////////////////////////////////////////////////////
